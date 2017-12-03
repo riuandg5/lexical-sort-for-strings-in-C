@@ -5,41 +5,41 @@
 int main()
 {
     int num,i,j,k,lshort;
-    
+
     //Get number of strings to arrange.
     printf("Enter number of words you want to arrange : ");
     scanf("%d",&num);
-  
+
     //Declare num number of strings with available length of 100 characters.
     char word[num][100];
-  
+
     //Input strings one by one.
     for(j=0;j<num;j++)
     {
         printf("Enter string %d : ",j+1);
         scanf("\n%[^\n]",word[j]); //exclude white spaces
     }
-  
+
     //Bubble sort algorithm
     for(k=0;k<num-1;k++)
         for(j=0;j<num-1-k;j++)
         {
             /*Take two strings at a time.
               Compare their length.*/
-            
+
             //lshort = lenght of shorter string
             if(strlen(word[j])<=strlen(word[j+1]))
                 lshort=strlen(word[j]);
             else
                 lshort=strlen(word[j+1]);
-          
+
             //Compare letter by letter of both strings till shorter string's length.
             for(i=0;i<lshort;i++)
             {
                 //If ascii value of ith letter of 1st string is smaller than 2nd then do nothing.
                 if(word[j][i]<word[j+1][i])
                     break;
-                
+
                 //If ascii value of ith letter of 1st string is greater than 2nd then swap strings.
                 else if(word[j][i]>word[j+1][i])
                 {
@@ -51,11 +51,11 @@ int main()
                 }
             }
         }
-  
+
     //Print arranged strings one by one
     printf("\nArranging in dictionary order :\n\n");
     for(j=0;j<num;j++)
         printf("%s\n",word[j]);
-  
+
     return 0;
 }
