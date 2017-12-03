@@ -4,7 +4,7 @@
 
 int main()
 {
-    int num,i,j,k,tshort;
+    int num,i,j,k,lshort;
     
     //Get number of strings to arrange.
     printf("Enter number of words you want to arrange : ");
