@@ -16,7 +16,7 @@ int main()
     for(int j=0;j<num;j++)
     {
         printf("Enter word %d : ",j+1);
-        scanf("\n%[^\n]",word[j]); //exclude white spaces
+        scanf("\n%[^\n]",word[j]); //include white spaces
     }
 
     //Bubble sort algorithm
